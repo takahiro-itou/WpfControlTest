@@ -1,3 +1,3 @@
 [submodule "WpfControl"]
 	path = WpfControl
-	url = git@gitlab.com:takahiro-itou/WpfControlLibrary.git
+	url  = ../WpfControlLibrary.git
