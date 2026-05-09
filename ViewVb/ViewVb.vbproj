@@ -10,7 +10,7 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
-  <Import Project="Props\OutputApps.props" />
+  <Import Project="..\Props\OutputApps.props" />
 
   <ItemGroup>
   </ItemGroup>
