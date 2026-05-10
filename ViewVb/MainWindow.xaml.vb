@@ -13,8 +13,7 @@ Dim outText As String
 End Sub
 
 Private Sub SampleControl1_RunButtonClick(
-        ByVal sender As Object, ByVal e As EventArgs) _
-    Handles SampleControl1.RunButtonClick
+        ByVal sender As Object, ByVal e As EventArgs)
 ''--------------------------------------------------------------------
 ''    イベントハンドラ
 ''
