@@ -78,6 +78,7 @@ End Property
 Public ReadOnly Property RunButtonCommand As ICommand  _
         Implements ISampleViewModel.RunButtonCommand
     Get
+        Return  Me.m_runButtonCommand
     End Get
 End Property
 
