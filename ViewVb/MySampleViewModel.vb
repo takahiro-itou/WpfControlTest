@@ -68,6 +68,8 @@ End Property
 
 Public ReadOnly Property OutputText As String  _
         Implements ISampleViewModel.OutputText
+    Get
+    End Get
 End Property
 
 Public ReadOnly Property RunButtonCommand As ICommand  _
