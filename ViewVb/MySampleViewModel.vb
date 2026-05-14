@@ -61,14 +61,17 @@ End Property
 Public Property InputText As String  _
         Implements ISampleViewModel.InputText
     Get
+        Return  Me.m_inputText
     End Get
     Set(ByVal value As String)
+        Me.m_inputText = value
     End Set
 End Property
 
 Public ReadOnly Property OutputText As String  _
         Implements ISampleViewModel.OutputText
     Get
+        Return  Me.m_outputText
     End Get
 End Property
 
