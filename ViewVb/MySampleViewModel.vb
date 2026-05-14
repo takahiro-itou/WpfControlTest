@@ -41,4 +41,10 @@ Public Class MySampleViewModel
         Implements INotifyPropertyChanged
         Implements ISampleViewModel
 
+Private m_inputText As String
+Private m_outputText As String
+
+Private ReadOnly m_clearButtonCommand As SimpleCommand
+Private ReadOnly m_runButtonCommand As SimpleCommand
+
 End Class
