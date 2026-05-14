@@ -60,6 +60,10 @@ End Property
 
 Public Property InputText As String  _
         Implements ISampleViewModel.InputText
+    Get
+    End Get
+    Set(ByVal value As String)
+    End Set
 End Property
 
 Public ReadOnly Property OutputText As String  _
