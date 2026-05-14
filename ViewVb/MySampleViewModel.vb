@@ -62,7 +62,7 @@ Public Property InputText As String  _
         Implements ISampleViewModel.InputText
 End Property
 
-Public ReadOnly Property OutputText As Strng  _
+Public ReadOnly Property OutputText As String  _
         Implements ISampleViewModel.OutputText
 End Property
 
