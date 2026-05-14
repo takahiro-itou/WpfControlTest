@@ -18,6 +18,22 @@ Public Sub New(
     Me.m_canExecute = canExecute
 End Sub
 
+Public Function CanExecute(parameter As Object) As Boolean  _
+        Implements ICommand.CanExecute
+    Return If(m_canexecute Is Nothing, True, Me.m_canExecute(parameter))
+End Function
+
+Public Sub Execute(parameter As Object) Implements ICommand.Execute
+    Me.m_execute(parameter)
+End Sub
+
+Public Event CanExecuteChanged As EventHandler _
+        Implements ICommand.CanExecuteChanged
+
+Public Sub RaiseCanExecuteChanged()
+    RaiseEvent CanExecuteChanged(Me, EventArgs.Empty)
+End Sub
+
 End Class
 
 
