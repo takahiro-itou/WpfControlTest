@@ -78,4 +78,7 @@ Public ReadOnly Property RunButtonCommand As ICommand  _
     End Get
 End Property
 
+Public Event PropertyChanged As PropertyChangedEventHandler  _
+        Implements INotifyPropertyChanged.PropertyChanged
+
 End Class
