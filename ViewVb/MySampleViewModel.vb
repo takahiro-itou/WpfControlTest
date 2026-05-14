@@ -47,4 +47,27 @@ Private m_outputText As String
 Private ReadOnly m_clearButtonCommand As SimpleCommand
 Private ReadOnly m_runButtonCommand As SimpleCommand
 
+Public Sub New()
+
+End Sub
+
+Public ReadOnly Property ClearButtonCommand As ICommand  _
+        Implements ISampleViewModel.ClearButtonCommand
+    Get
+        Return  Me.m_clearButtonCommand
+    End Get
+End Property
+
+Public Property InputText As String  _
+        Implements ISampleViewModel.InputText
+End Property
+
+Public ReadOnly Property OutputText As Strng  _
+        Implements ISampleViewModel.OutputText
+End Property
+
+Public ReadOnly Property RunButtonCommand As ICommand  _
+        Implements ISampleViewModel.RunButtonCommand
+End Property
+
 End Class
