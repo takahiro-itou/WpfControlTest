@@ -16,6 +16,9 @@ Private m_outputText As String
 Private ReadOnly m_clearButtonCommand As SimpleCommand
 Private ReadOnly m_runButtonCommand As SimpleCommand
 
+Public Event PropertyChanged As PropertyChangedEventHandler  _
+        Implements INotifyPropertyChanged.PropertyChanged
+
 
 Public Sub New()
 ''--------------------------------------------------------------------
@@ -70,11 +73,12 @@ Public ReadOnly Property RunButtonCommand As ICommand  _
     End Get
 End Property
 
-Public Event PropertyChanged As PropertyChangedEventHandler  _
-        Implements INotifyPropertyChanged.PropertyChanged
 
 Protected Sub OnPropertyChanged(
         <CallerMemberName> Optional propertyName As String = Nothing)
+''--------------------------------------------------------------------
+''    PropertyChanged イベントを発生させる
+''--------------------------------------------------------------------
     RaiseEvent PropertyChanged(
             Me, New PropertyChangedEventArgs(propertyName)
     )
