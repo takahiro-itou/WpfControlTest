@@ -25,6 +25,20 @@ Public Sub New()
 ''    コンストラクタ
 ''--------------------------------------------------------------------
 
+    Me.m_clearButtonCommand = New SimpleCommand(
+        Sub(ByVal parameter As Object)
+            ExecuteClearButtonCommand()
+        End Sub
+    )
+    Me.m_runButtonCommand = New SimpleCommand(
+        Sub(ByVal parameter As Object)
+            ExecuteRunButtonCommand()
+        End Sub,
+        Function(ByVal parameter As Object) As Boolean
+            Return  Me.m_inputText <> ""
+        End Function
+    )
+
 End Sub
 
 ''--------------------------------------------------------------------
@@ -82,6 +96,28 @@ Protected Sub OnPropertyChanged(
     RaiseEvent PropertyChanged(
             Me, New PropertyChangedEventArgs(propertyName)
     )
+End Sub
+
+
+Private Sub ExecuteClearButtonCommand()
+''--------------------------------------------------------------------
+''    「クリア」ボタンをクリックした時の処理
+''--------------------------------------------------------------------
+    Me.m_inputText = ""
+    Me.m_outputText = ""
+End Sub
+
+Private Sub ExecuteRunButtonCommand()
+''--------------------------------------------------------------------
+''    「実行」ボタンをクリックした時の処理
+''--------------------------------------------------------------------
+Dim outText As String
+
+    outText = $"入力した文字列は {Me.m_inputText} です"
+    Me.m_outputText = outText
+    OnPropertyChanged(NameOf(OutputText))
+
+    MsgBox(outText, MsgBoxStyle.OkOnly)
 End Sub
 
 End Class
