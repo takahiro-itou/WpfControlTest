@@ -16,10 +16,17 @@ Private m_outputText As String
 Private ReadOnly m_clearButtonCommand As SimpleCommand
 Private ReadOnly m_runButtonCommand As SimpleCommand
 
+
 Public Sub New()
+''--------------------------------------------------------------------
+''    コンストラクタ
+''--------------------------------------------------------------------
 
 End Sub
 
+''--------------------------------------------------------------------
+''    ClearButtonCommand  プロパティ
+''
 Public ReadOnly Property ClearButtonCommand As ICommand  _
         Implements ISampleViewModel.ClearButtonCommand
     Get
@@ -27,6 +34,10 @@ Public ReadOnly Property ClearButtonCommand As ICommand  _
     End Get
 End Property
 
+
+''--------------------------------------------------------------------
+''    InputText プロパティ
+''
 Public Property InputText As String  _
         Implements ISampleViewModel.InputText
     Get
@@ -37,6 +48,10 @@ Public Property InputText As String  _
     End Set
 End Property
 
+
+''--------------------------------------------------------------------
+''    OutputText  プロパティ
+''
 Public ReadOnly Property OutputText As String  _
         Implements ISampleViewModel.OutputText
     Get
@@ -44,6 +59,10 @@ Public ReadOnly Property OutputText As String  _
     End Get
 End Property
 
+
+''--------------------------------------------------------------------
+''    RunButtonCommand  プロパティ
+''
 Public ReadOnly Property RunButtonCommand As ICommand  _
         Implements ISampleViewModel.RunButtonCommand
     Get
