@@ -5,37 +5,6 @@ Imports System.Windows.Input
 
 Imports WpfControl.Sample
 
-Public Class SimpleCommand
-        Implements ICommand
-
-Private ReadOnly m_execute As Action(Of Object)
-Private ReadOnly m_canExecute As Predicate(Of Object)
-
-Public Sub New(
-        execute As Action(Of OBject),
-        Optional canExecute As Predicate(Of Object) = Nothing)
-    Me.m_execute = execute
-    Me.m_canExecute = canExecute
-End Sub
-
-Public Function CanExecute(parameter As Object) As Boolean  _
-        Implements ICommand.CanExecute
-    Return If(m_canexecute Is Nothing, True, Me.m_canExecute(parameter))
-End Function
-
-Public Sub Execute(parameter As Object) Implements ICommand.Execute
-    Me.m_execute(parameter)
-End Sub
-
-Public Event CanExecuteChanged As EventHandler _
-        Implements ICommand.CanExecuteChanged
-
-Public Sub RaiseCanExecuteChanged()
-    RaiseEvent CanExecuteChanged(Me, EventArgs.Empty)
-End Sub
-
-End Class
-
 
 Public Class MySampleViewModel
         Implements INotifyPropertyChanged
@@ -47,10 +16,34 @@ Private m_outputText As String
 Private ReadOnly m_clearButtonCommand As SimpleCommand
 Private ReadOnly m_runButtonCommand As SimpleCommand
 
+Public Event PropertyChanged As PropertyChangedEventHandler  _
+        Implements INotifyPropertyChanged.PropertyChanged
+
+
 Public Sub New()
+''--------------------------------------------------------------------
+''    コンストラクタ
+''--------------------------------------------------------------------
+
+    Me.m_clearButtonCommand = New SimpleCommand(
+        Sub(ByVal parameter As Object)
+            ExecuteClearButtonCommand()
+        End Sub
+    )
+    Me.m_runButtonCommand = New SimpleCommand(
+        Sub(ByVal parameter As Object)
+            ExecuteRunButtonCommand()
+        End Sub,
+        Function(ByVal parameter As Object) As Boolean
+            Return  Me.m_inputText <> ""
+        End Function
+    )
 
 End Sub
 
+''--------------------------------------------------------------------
+''    ClearButtonCommand  プロパティ
+''
 Public ReadOnly Property ClearButtonCommand As ICommand  _
         Implements ISampleViewModel.ClearButtonCommand
     Get
@@ -58,6 +51,10 @@ Public ReadOnly Property ClearButtonCommand As ICommand  _
     End Get
 End Property
 
+
+''--------------------------------------------------------------------
+''    InputText プロパティ
+''
 Public Property InputText As String  _
         Implements ISampleViewModel.InputText
     Get
@@ -65,9 +62,14 @@ Public Property InputText As String  _
     End Get
     Set(ByVal value As String)
         Me.m_inputText = value
+        Me.m_runButtonCommand.RaiseCanExecuteChanged()
     End Set
 End Property
 
+
+''--------------------------------------------------------------------
+''    OutputText  プロパティ
+''
 Public ReadOnly Property OutputText As String  _
         Implements ISampleViewModel.OutputText
     Get
@@ -75,6 +77,10 @@ Public ReadOnly Property OutputText As String  _
     End Get
 End Property
 
+
+''--------------------------------------------------------------------
+''    RunButtonCommand  プロパティ
+''
 Public ReadOnly Property RunButtonCommand As ICommand  _
         Implements ISampleViewModel.RunButtonCommand
     Get
@@ -82,14 +88,37 @@ Public ReadOnly Property RunButtonCommand As ICommand  _
     End Get
 End Property
 
-Public Event PropertyChanged As PropertyChangedEventHandler  _
-        Implements INotifyPropertyChanged.PropertyChanged
 
 Protected Sub OnPropertyChanged(
         <CallerMemberName> Optional propertyName As String = Nothing)
+''--------------------------------------------------------------------
+''    PropertyChanged イベントを発生させる
+''--------------------------------------------------------------------
     RaiseEvent PropertyChanged(
             Me, New PropertyChangedEventArgs(propertyName)
     )
+End Sub
+
+
+Private Sub ExecuteClearButtonCommand()
+''--------------------------------------------------------------------
+''    「クリア」ボタンをクリックした時の処理
+''--------------------------------------------------------------------
+    Me.m_inputText = ""
+    Me.m_outputText = ""
+End Sub
+
+Private Sub ExecuteRunButtonCommand()
+''--------------------------------------------------------------------
+''    「実行」ボタンをクリックした時の処理
+''--------------------------------------------------------------------
+Dim outText As String
+
+    outText = $"Input is {Me.m_inputText} !"
+    Me.m_outputText = outText
+    OnPropertyChanged(NameOf(OutputText))
+
+    MsgBox(outText, MsgBoxStyle.OkOnly)
 End Sub
 
 End Class

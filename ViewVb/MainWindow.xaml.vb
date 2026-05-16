@@ -1,6 +1,14 @@
 ﻿
 Public Class MainWindow
 
+Public Sub New()
+''--------------------------------------------------------------------
+''    コンストラクタ
+''--------------------------------------------------------------------
+    InitializeComponent()
+    SampleControl1.ViewModel = New MySampleViewModel()
+End Sub
+
 Private Sub RunSample(ByVal message As String)
 ''--------------------------------------------------------------------
 ''    サンプルコード
