@@ -104,8 +104,10 @@ Private Sub ExecuteClearButtonCommand()
 ''--------------------------------------------------------------------
 ''    「クリア」ボタンをクリックした時の処理
 ''--------------------------------------------------------------------
-    Me.m_inputText = ""
+    Me.m_inputText  = ""
     Me.m_outputText = ""
+    OnPropertyChanged(NameOf(InputText))
+    OnPropertyChanged(NameOf(OutputText))
 End Sub
 
 Private Sub ExecuteRunButtonCommand()
