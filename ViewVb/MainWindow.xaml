@@ -15,7 +15,6 @@
         x:Name="SampleControl1"
         Height="112"
         Margin="16,8,16,8"
-        RunButtonClick="SampleControl1_RunButtonClick"
     />
   </StackPanel>
 

@@ -70,11 +70,14 @@ End Property
 ''--------------------------------------------------------------------
 ''    OutputText  プロパティ
 ''
-Public ReadOnly Property OutputText As String  _
+Public Property OutputText As String  _
         Implements ISampleViewModel.OutputText
     Get
         Return  Me.m_outputText
     End Get
+    Private Set(ByVal value As String)
+        Me.m_outputText = value
+    End Set
 End Property
 
 
@@ -104,8 +107,10 @@ Private Sub ExecuteClearButtonCommand()
 ''--------------------------------------------------------------------
 ''    「クリア」ボタンをクリックした時の処理
 ''--------------------------------------------------------------------
-    Me.m_inputText = ""
-    Me.m_outputText = ""
+    Me.InputText  = ""
+    Me.OutputText = ""
+    OnPropertyChanged(NameOf(InputText))
+    OnPropertyChanged(NameOf(OutputText))
 End Sub
 
 Private Sub ExecuteRunButtonCommand()
@@ -115,7 +120,7 @@ Private Sub ExecuteRunButtonCommand()
 Dim outText As String
 
     outText = $"Input is {Me.m_inputText} !"
-    Me.m_outputText = outText
+    Me.OutputText = outText
     OnPropertyChanged(NameOf(OutputText))
 
     MsgBox(outText, MsgBoxStyle.OkOnly)
