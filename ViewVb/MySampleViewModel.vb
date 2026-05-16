@@ -113,7 +113,7 @@ Private Sub ExecuteRunButtonCommand()
 ''--------------------------------------------------------------------
 Dim outText As String
 
-    outText = $"入力した文字列は {Me.m_inputText} です"
+    outText = $"Input is {Me.m_inputText} !"
     Me.m_outputText = outText
     OnPropertyChanged(NameOf(OutputText))
 
