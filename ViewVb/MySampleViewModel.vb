@@ -62,6 +62,7 @@ Public Property InputText As String  _
     End Get
     Set(ByVal value As String)
         Me.m_inputText = value
+        Me.m_runButtonCommand.RaiseCanExecuteChanged()
     End Set
 End Property
 
