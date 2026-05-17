@@ -121,7 +121,6 @@ Dim outText As String
 
     outText = $"Input is {Me.m_inputText} !"
     Me.OutputText = outText
-    OnPropertyChanged(NameOf(OutputText))
 
     MsgBox(outText, MsgBoxStyle.OkOnly)
 End Sub
