@@ -63,6 +63,7 @@ Public Property InputText As String  _
     Set(ByVal value As String)
         Me.m_inputText = value
         Me.m_runButtonCommand.RaiseCanExecuteChanged()
+        OnPropertyChanged(NameOf(InputText))
     End Set
 End Property
 
@@ -77,6 +78,7 @@ Public Property OutputText As String  _
     End Get
     Private Set(ByVal value As String)
         Me.m_outputText = value
+        OnPropertyChanged(NameOf(OutputText))
     End Set
 End Property
 
@@ -109,8 +111,6 @@ Private Sub ExecuteClearButtonCommand()
 ''--------------------------------------------------------------------
     Me.InputText  = ""
     Me.OutputText = ""
-    OnPropertyChanged(NameOf(InputText))
-    OnPropertyChanged(NameOf(OutputText))
 End Sub
 
 Private Sub ExecuteRunButtonCommand()
