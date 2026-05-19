@@ -7,8 +7,7 @@ Imports WpfControl.Sample
 
 
 Public Class MySampleViewModel
-        Implements INotifyPropertyChanged
-        Implements ISampleViewModel
+        Inherits WpfControl.Sample.AbstractSampleViewModel
 
 Private m_inputText As String
 Private m_outputText As String
