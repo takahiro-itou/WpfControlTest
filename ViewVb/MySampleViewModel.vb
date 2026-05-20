@@ -15,9 +15,6 @@ Private m_outputText As String
 Private ReadOnly m_clearButtonCommand As SimpleCommand
 Private ReadOnly m_runButtonCommand As SimpleCommand
 
-Public Event PropertyChanged As PropertyChangedEventHandler  _
-        Implements INotifyPropertyChanged.PropertyChanged
-
 
 Public Sub New()
 ''--------------------------------------------------------------------
@@ -43,8 +40,7 @@ End Sub
 ''--------------------------------------------------------------------
 ''    ClearButtonCommand  プロパティ
 ''
-Public ReadOnly Property ClearButtonCommand As ICommand  _
-        Implements ISampleViewModel.ClearButtonCommand
+Public ReadOnly Property ClearButtonCommand As ICommand
     Get
         Return  Me.m_clearButtonCommand
     End Get
@@ -54,8 +50,7 @@ End Property
 ''--------------------------------------------------------------------
 ''    InputText プロパティ
 ''
-Public Property InputText As String  _
-        Implements ISampleViewModel.InputText
+Public Property InputText As String
     Get
         Return  Me.m_inputText
     End Get
@@ -70,8 +65,7 @@ End Property
 ''--------------------------------------------------------------------
 ''    OutputText  プロパティ
 ''
-Public Property OutputText As String  _
-        Implements ISampleViewModel.OutputText
+Public Property OutputText As String
     Get
         Return  Me.m_outputText
     End Get
@@ -85,8 +79,7 @@ End Property
 ''--------------------------------------------------------------------
 ''    RunButtonCommand  プロパティ
 ''
-Public ReadOnly Property RunButtonCommand As ICommand  _
-        Implements ISampleViewModel.RunButtonCommand
+Public ReadOnly Property RunButtonCommand As ICommand
     Get
         Return  Me.m_runButtonCommand
     End Get
