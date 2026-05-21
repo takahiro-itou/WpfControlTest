@@ -79,14 +79,6 @@ Protected Overrides Sub raiseCanExecuteChanged()
 End Sub
 
 
-Private Sub ExecuteClearButtonCommand()
-''--------------------------------------------------------------------
-''    「クリア」ボタンをクリックした時の処理
-''--------------------------------------------------------------------
-    Me.InputText  = ""
-    Me.OutputText = ""
-End Sub
-
 Private Sub ExecuteRunButtonCommand()
 ''--------------------------------------------------------------------
 ''    「実行」ボタンをクリックした時の処理
