@@ -79,14 +79,14 @@ End Property
 ''--------------------------------------------------------------------
 ''    RunButtonCommand  プロパティ
 ''
-Public ReadOnly Property RunButtonCommand As ICommand
+Public Overrides ReadOnly Property RunButtonCommand As ICommand
     Get
         Return  Me.m_runButtonCommand
     End Get
 End Property
 
 
-Protected Sub raiseCanExecuteChanged()
+Protected Overrides Sub raiseCanExecuteChanged()
 ''--------------------------------------------------------------------
 ''    CanExecuteChanged を発生させる
 ''--------------------------------------------------------------------
