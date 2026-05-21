@@ -96,6 +96,13 @@ Protected Sub OnPropertyChanged(
     )
 End Sub
 
+Protected Sub raiseCanExecuteChanged()
+''--------------------------------------------------------------------
+''    CanExecuteChanged を発生させる
+''--------------------------------------------------------------------
+    Me.m_runButtonCommand.RaiseCanExecuteChanged()
+End Sub
+
 
 Private Sub ExecuteClearButtonCommand()
 ''--------------------------------------------------------------------
