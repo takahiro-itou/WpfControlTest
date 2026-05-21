@@ -57,7 +57,7 @@ Public Property InputText As String
     Set(ByVal value As String)
         Me.m_inputText = value
         Me.m_runButtonCommand.RaiseCanExecuteChanged()
-        OnPropertyChanged(NameOf(InputText))
+        raisePropertyChanged(NameOf(InputText))
     End Set
 End Property
 
@@ -71,7 +71,7 @@ Public Property OutputText As String
     End Get
     Private Set(ByVal value As String)
         Me.m_outputText = value
-        OnPropertyChanged(NameOf(OutputText))
+        raisePropertyChanged(NameOf(OutputText))
     End Set
 End Property
 
@@ -85,16 +85,6 @@ Public ReadOnly Property RunButtonCommand As ICommand
     End Get
 End Property
 
-
-Protected Sub OnPropertyChanged(
-        <CallerMemberName> Optional propertyName As String = Nothing)
-''--------------------------------------------------------------------
-''    PropertyChanged イベントを発生させる
-''--------------------------------------------------------------------
-    RaiseEvent PropertyChanged(
-            Me, New PropertyChangedEventArgs(propertyName)
-    )
-End Sub
 
 Protected Sub raiseCanExecuteChanged()
 ''--------------------------------------------------------------------
