@@ -12,7 +12,6 @@ Public Class MySampleViewModel
 Private m_inputText As String
 Private m_outputText As String
 
-Private ReadOnly m_clearButtonCommand As SimpleCommand
 Private ReadOnly m_runButtonCommand As SimpleCommand
 
 
@@ -21,11 +20,6 @@ Public Sub New()
 ''    コンストラクタ
 ''--------------------------------------------------------------------
 
-    Me.m_clearButtonCommand = New SimpleCommand(
-        Sub(ByVal parameter As Object)
-            ExecuteClearButtonCommand()
-        End Sub
-    )
     Me.m_runButtonCommand = New SimpleCommand(
         Sub(ByVal parameter As Object)
             ExecuteRunButtonCommand()
@@ -36,15 +30,6 @@ Public Sub New()
     )
 
 End Sub
-
-''--------------------------------------------------------------------
-''    ClearButtonCommand  プロパティ
-''
-Public ReadOnly Property ClearButtonCommand As ICommand
-    Get
-        Return  Me.m_clearButtonCommand
-    End Get
-End Property
 
 
 ''--------------------------------------------------------------------
