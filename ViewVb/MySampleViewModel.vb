@@ -9,8 +9,6 @@ Imports WpfControl.Sample
 Public Class MySampleViewModel
         Inherits WpfControl.Sample.AbstractSampleViewModel
 
-Private m_inputText As String
-
 Private ReadOnly m_runButtonCommand As SimpleCommand
 
 
@@ -24,26 +22,11 @@ Public Sub New()
             ExecuteRunButtonCommand()
         End Sub,
         Function(ByVal parameter As Object) As Boolean
-            Return  Me.m_inputText <> ""
+            Return  Me.InputText <> ""
         End Function
     )
 
 End Sub
-
-
-''--------------------------------------------------------------------
-''    InputText プロパティ
-''
-Public Property InputText As String
-    Get
-        Return  Me.m_inputText
-    End Get
-    Set(ByVal value As String)
-        Me.m_inputText = value
-        Me.m_runButtonCommand.RaiseCanExecuteChanged()
-        raisePropertyChanged(NameOf(InputText))
-    End Set
-End Property
 
 
 ''--------------------------------------------------------------------
@@ -70,7 +53,7 @@ Private Sub ExecuteRunButtonCommand()
 ''--------------------------------------------------------------------
 Dim outText As String
 
-    outText = $"Input is {Me.m_inputText} !"
+    outText = $"Input is {Me.InputText} !"
     Me.OutputText = outText
 
     MsgBox(outText, MsgBoxStyle.OkOnly)
