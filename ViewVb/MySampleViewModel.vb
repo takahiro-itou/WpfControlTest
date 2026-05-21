@@ -10,7 +10,6 @@ Public Class MySampleViewModel
         Inherits WpfControl.Sample.AbstractSampleViewModel
 
 Private m_inputText As String
-Private m_outputText As String
 
 Private ReadOnly m_runButtonCommand As SimpleCommand
 
@@ -43,20 +42,6 @@ Public Property InputText As String
         Me.m_inputText = value
         Me.m_runButtonCommand.RaiseCanExecuteChanged()
         raisePropertyChanged(NameOf(InputText))
-    End Set
-End Property
-
-
-''--------------------------------------------------------------------
-''    OutputText  プロパティ
-''
-Public Property OutputText As String
-    Get
-        Return  Me.m_outputText
-    End Get
-    Private Set(ByVal value As String)
-        Me.m_outputText = value
-        raisePropertyChanged(NameOf(OutputText))
     End Set
 End Property
 
