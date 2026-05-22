@@ -9,7 +9,7 @@ Imports WpfControl.Sample
 Public Class MySampleViewModel
         Inherits WpfControl.Sample.AbstractSampleViewModel
 
-Private ReadOnly m_runButtonCommand As SimpleCommand
+Private ReadOnly m_runButtonCommand As WpfControl.Common.SimpleCommand
 
 
 Public Sub New()
@@ -17,7 +17,7 @@ Public Sub New()
 ''    コンストラクタ
 ''--------------------------------------------------------------------
 
-    Me.m_runButtonCommand = New SimpleCommand(
+    Me.m_runButtonCommand = New WpfControl.Common.SimpleCommand(
         Sub(ByVal parameter As Object)
             ExecuteRunButtonCommand()
         End Sub,
