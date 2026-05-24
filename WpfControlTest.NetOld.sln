@@ -4,10 +4,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.14.36915.13 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
 
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfControl", "WpfControl\WpfControl.csproj", "{1C4736DE-C7DE-1784-8A00-BDB97629D0AA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfControl", "WpfControl\WpfControl.NetOld.csproj", "{1C4736DE-C7DE-1784-8A00-BDB97629D0AA}"
 EndProject
 
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ViewVb", "ViewVb\ViewVb.vbproj", "{CAB3CC38-2B52-42E5-825B-7E3B71094905}"
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ViewVb", "ViewVb\ViewVb.NetOld.vbproj", "{CAB3CC38-2B52-42E5-825B-7E3B71094905}"
 EndProject
 
 Global
