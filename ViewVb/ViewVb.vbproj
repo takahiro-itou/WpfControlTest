@@ -6,9 +6,7 @@
     <OutputType>WinExe</OutputType>
     <Platforms>x64;Win32;Any CPU</Platforms>
     <RootNamespace>ViewVb</RootNamespace>
-    <TargetFrameworks>
-      net48;
-    </TargetFrameworks>
+    <TargetFramework>net8.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
