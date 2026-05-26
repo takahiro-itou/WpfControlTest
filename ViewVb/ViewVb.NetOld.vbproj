@@ -26,4 +26,8 @@
     <Compile Include="MySampleViewModel.vb" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+  </ItemGroup>
+
 </Project>
