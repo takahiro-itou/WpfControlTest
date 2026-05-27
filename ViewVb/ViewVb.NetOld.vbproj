@@ -19,6 +19,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\WpfControl\WpfControl.NetOld.csproj">
+      <Name>WpfControl</Name>
     </ProjectReference>
   </ItemGroup>
 
