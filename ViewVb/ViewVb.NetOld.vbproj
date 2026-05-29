@@ -2,6 +2,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <AssemblyName>ViewVb</AssemblyName>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
     <OutputType>WinExe</OutputType>
     <Platforms>x64;Win32;Any CPU</Platforms>
@@ -20,6 +21,7 @@
   <ItemGroup>
     <ProjectReference Include="..\WpfControl\WpfControl.NetOld.csproj">
       <Name>WpfControl</Name>
+      <AssemblyName>WpfControl</AssemblyName>
     </ProjectReference>
   </ItemGroup>
 
