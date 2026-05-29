@@ -13,36 +13,26 @@ EndProject
 Global
 
     GlobalSection(SolutionConfigurationPlatforms) = preSolution
-        Debug|Any CPU = Debug|Any CPU
         Debug|x64 = Debug|x64
         Debug|x86 = Debug|x86
-        Release|Any CPU = Release|Any CPU
         Release|x64 = Release|x64
         Release|x86 = Release|x86
     EndGlobalSection
 
     GlobalSection(ProjectConfigurationPlatforms) = postSolution
-        {1C4736DE-C7DE-1784-8A00-BDB97629D0AA}.Debug|Any CPU.ActiveCfg = Debug|x64
-        {1C4736DE-C7DE-1784-8A00-BDB97629D0AA}.Debug|Any CPU.Build.0 = Debug|x64
         {1C4736DE-C7DE-1784-8A00-BDB97629D0AA}.Debug|x64.ActiveCfg = Debug|x64
         {1C4736DE-C7DE-1784-8A00-BDB97629D0AA}.Debug|x64.Build.0 = Debug|x64
         {1C4736DE-C7DE-1784-8A00-BDB97629D0AA}.Debug|x86.ActiveCfg = Debug|Win32
         {1C4736DE-C7DE-1784-8A00-BDB97629D0AA}.Debug|x86.Build.0 = Debug|Win32
-        {1C4736DE-C7DE-1784-8A00-BDB97629D0AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-        {1C4736DE-C7DE-1784-8A00-BDB97629D0AA}.Release|Any CPU.Build.0 = Release|Any CPU
         {1C4736DE-C7DE-1784-8A00-BDB97629D0AA}.Release|x64.ActiveCfg = Release|x64
         {1C4736DE-C7DE-1784-8A00-BDB97629D0AA}.Release|x64.Build.0 = Release|x64
         {1C4736DE-C7DE-1784-8A00-BDB97629D0AA}.Release|x86.ActiveCfg = Release|Win32
         {1C4736DE-C7DE-1784-8A00-BDB97629D0AA}.Release|x86.Build.0 = Release|Win32
 
-        {CAB3CC38-2B52-42E5-825B-7E3B71094905}.Debug|Any CPU.ActiveCfg = Debug|x64
-        {CAB3CC38-2B52-42E5-825B-7E3B71094905}.Debug|Any CPU.Build.0 = Debug|x64
         {CAB3CC38-2B52-42E5-825B-7E3B71094905}.Debug|x64.ActiveCfg = Debug|x64
         {CAB3CC38-2B52-42E5-825B-7E3B71094905}.Debug|x64.Build.0 = Debug|x64
         {CAB3CC38-2B52-42E5-825B-7E3B71094905}.Debug|x86.ActiveCfg = Debug|Win32
         {CAB3CC38-2B52-42E5-825B-7E3B71094905}.Debug|x86.Build.0 = Debug|Win32
-        {CAB3CC38-2B52-42E5-825B-7E3B71094905}.Release|Any CPU.ActiveCfg = Release|Any CPU
-        {CAB3CC38-2B52-42E5-825B-7E3B71094905}.Release|Any CPU.Build.0 = Release|Any CPU
         {CAB3CC38-2B52-42E5-825B-7E3B71094905}.Release|x64.ActiveCfg = Release|x64
         {CAB3CC38-2B52-42E5-825B-7E3B71094905}.Release|x64.Build.0 = Release|x64
         {CAB3CC38-2B52-42E5-825B-7E3B71094905}.Release|x86.ActiveCfg = Release|Win32
