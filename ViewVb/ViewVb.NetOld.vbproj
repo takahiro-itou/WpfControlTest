@@ -7,7 +7,9 @@
     <OutputType>WinExe</OutputType>
     <Platforms>x64;Win32;Any CPU</Platforms>
     <RootNamespace>ViewVb</RootNamespace>
-    <TargetFramework>net8.0-windows</TargetFramework>
+    <TargetFrameworks>
+      net48
+    </TargetFrameworks>
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
@@ -17,12 +19,19 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\WpfControl\WpfControl.csproj" />
+    <ProjectReference Include="..\WpfControl\WpfControl.NetOld.csproj">
+      <Name>WpfControl</Name>
+      <AssemblyName>WpfControl</AssemblyName>
+    </ProjectReference>
   </ItemGroup>
 
   <ItemGroup>
     <Compile Include="MainWindow.xaml.vb" />
     <Compile Include="MySampleViewModel.vb" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="mscorlib" />
   </ItemGroup>
 
 </Project>
