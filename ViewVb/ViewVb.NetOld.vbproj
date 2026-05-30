@@ -27,6 +27,7 @@
 
   <ItemGroup>
     <Compile Include="MainWindow.xaml.vb" />
+    <Compile Include="MySampleModel.vb" />
     <Compile Include="MySampleViewModel.vb" />
   </ItemGroup>
 
