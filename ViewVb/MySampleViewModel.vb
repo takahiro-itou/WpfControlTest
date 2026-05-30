@@ -7,7 +7,7 @@ Imports WpfControl.Sample
 
 
 Public Class MySampleViewModel
-        Inherits WpfControl.Sample.AbstractSampleViewModel
+        Inherits WpfControl.Sample.SampleViewModel
 
 Private ReadOnly m_runButtonCommand As WpfControl.Common.SimpleCommand
 
