@@ -4,7 +4,7 @@ Imports WpfControl.Sample
 Public Class MySampleModel
         Inherits WpfControl.Sample.AbstractSampleModel
 
-Public Override Sub executeCommand()
+Public Overrides Sub executeCommand()
 ''--------------------------------------------------------------------
 ''    適当な動作を実行する
 ''--------------------------------------------------------------------
