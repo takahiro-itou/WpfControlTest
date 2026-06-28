@@ -6,12 +6,15 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:local="clr-namespace:ViewVb"
     Title="MainWindow"
-    Height="64" Width="384"
+    Height="128" Width="384"
 >
   <DockPanel>
     <Menu DockPanel.Dock="Top">
       <MenuItem Header="_File">
         <MenuItem Header="E\xit" />
+      </MenuItem>
+      <MenuItem Header="_Launch">
+        <MenuItem Header="Sample" />
       </MenuItem>
     </Menu>
     <StackPanel Orientation="Vertical">
