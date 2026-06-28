@@ -11,14 +11,11 @@ Public Sub New()
 End Sub
 
 
-Private Sub SampleControl1_RunButtonClick(
-        ByVal sender As Object, ByVal e As EventArgs)
+Private Sub mnuFileExit_Click(ByVal sender As Object, ByVal e As EventArgs)
 ''--------------------------------------------------------------------
-''    イベントハンドラ
-''
-''    ユーザーコントロールの「実行ボタンクリック」
+''    メニュー「ファイル」－「終了」
 ''--------------------------------------------------------------------
-
+    Application.Exit()
 End Sub
 
 End Class
