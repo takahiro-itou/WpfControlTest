@@ -15,7 +15,7 @@ Private Sub mnuFileExit_Click(ByVal sender As Object, ByVal e As EventArgs)
 ''--------------------------------------------------------------------
 ''    メニュー「ファイル」－「終了」
 ''--------------------------------------------------------------------
-    Application.Exit()
+    System.Windows.Application.Current.Shutdown();
 End Sub
 
 End Class
