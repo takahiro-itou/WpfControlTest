@@ -21,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="MainWindow.xaml.vb" />
+    <Compile Include="SampleWindow.xaml.vb" />
     <Compile Include="MySampleModel.vb" />
   </ItemGroup>
 
