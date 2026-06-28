@@ -14,7 +14,7 @@
         <MenuItem Header="E_xit" Click="mnuFileExit_Click" />
       </MenuItem>
       <MenuItem Header="_Launch">
-        <MenuItem Header="Sample" />
+        <MenuItem Header="Sample" Click="mnuLaunchSample_Click" />
       </MenuItem>
     </Menu>
     <StackPanel Orientation="Vertical">
