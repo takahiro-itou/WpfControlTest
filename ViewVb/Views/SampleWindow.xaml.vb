@@ -1,4 +1,6 @@
 ﻿
+Namespace Global.ViewVb.Vies
+
 Public Class SampleWindow
 
 Private m_model As MySampleModel
@@ -34,3 +36,5 @@ Private Sub SampleControl1_RunButtonClick(
 End Sub
 
 End Class
+
+End Namespace
