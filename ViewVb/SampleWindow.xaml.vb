@@ -1,5 +1,5 @@
 ﻿
-Public Class MainWindow
+Public Class SampleWindow
 
 Private m_model As MySampleModel
 
