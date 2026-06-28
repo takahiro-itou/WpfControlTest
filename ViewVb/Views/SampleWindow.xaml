@@ -8,16 +8,14 @@
     xmlns:WpfControl="clr-namespace:WpfControl;assembly=WpfControl"
     xmlns:WpfControl.Sample="clr-namespace:WpfControl.Sample;assembly=WpfControl"
     Title="SampleWindow"
-    Height="64" Width="384"
+    Height="448" Width="384"
 >
-  <DockPanel>
-    <Menu DockPanel.Dock="Top">
-      <MenuItem Header="_File">
-        <MenuItem Header="E\xit" />
-      </MenuItem>
-    </Menu>
-    <StackPanel Orientation="Vertical">
-    </StackPanel>
-  </DockPanel>
+  <StackPanel Orientation="Vertical">
+    <WpfControl.Sample:SampleControl
+        x:Name="SampleControl1"
+        Height="112"
+        Margin="16,8,16,8"
+    />
+  </StackPanel>
 
 </Window>
