@@ -1,5 +1,5 @@
 ﻿
-Namespace Global.ViewVb.Vies
+Namespace Global.ViewVb.Views
 
 Public Class SampleWindow
 

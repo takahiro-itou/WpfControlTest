@@ -1,4 +1,6 @@
 ﻿
+Namespace Global.ViewVb.Views
+
 Public Class MainWindow
 
 Public Sub New()
@@ -20,3 +22,5 @@ Private Sub SampleControl1_RunButtonClick(
 End Sub
 
 End Class
+
+End Namespace
