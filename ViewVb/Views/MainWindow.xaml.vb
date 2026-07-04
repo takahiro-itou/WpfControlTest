@@ -20,10 +20,19 @@ End Sub
 
 Private Sub mnuLaunchSample_Click(ByVal sender As Object, ByVal e As EventArgs)
 ''--------------------------------------------------------------------
-''    メニュー「起動」－「サンプル」
+''    メニュー「起動」－「Sample」
 ''--------------------------------------------------------------------
     Dim frmSample As New SampleWindow()
     frmSample.Show()
+End Sub
+
+Private Sub mnuLaunchUtilsProgress_Click(
+        ByVal sender As Object, ByVal e As EventArgs)
+''--------------------------------------------------------------------
+''    メニュー「起動」－「Utils」－「Progress」
+''--------------------------------------------------------------------
+    Dim frmProgress As New ProgressWindow()
+    frmProgress.Show()
 End Sub
 
 

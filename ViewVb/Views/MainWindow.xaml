@@ -15,6 +15,9 @@
       </MenuItem>
       <MenuItem Header="_Launch">
         <MenuItem Header="Sample" Click="mnuLaunchSample_Click" />
+        <MenuItem Header="_Utils">
+          <MenuItem Header="ProgressBar" Click="mnuLaunchUtilsProgress_Click" />
+        </MenuItem>
       </MenuItem>
     </Menu>
     <StackPanel Orientation="Vertical">
