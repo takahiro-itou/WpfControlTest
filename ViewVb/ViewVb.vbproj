@@ -23,6 +23,7 @@
   <ItemGroup>
     <Compile Include="Models/MySampleModel.vb" />
     <Compile Include="Views/MainWindow.xaml.vb" />
+    <Compile Include="Views/ProgressWindow.xaml.vb" />
     <Compile Include="Views/SampleWindow.xaml.vb" />
   </ItemGroup>
 
