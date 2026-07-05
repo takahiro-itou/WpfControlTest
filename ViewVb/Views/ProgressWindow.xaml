@@ -12,6 +12,7 @@
 >
   <StackPanel Orientation="Vertical">
     <WpfControl.Utils:ProgressControl
+        x:Name="Progress1"
         Margin="16,8,16,8"
     />
   </StackPanel>
