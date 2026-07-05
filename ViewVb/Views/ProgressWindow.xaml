@@ -15,6 +15,7 @@
         x:Name="Progress1"
         Margin="16,8,16,8"
     />
+    <Button Content="Run" Width="64" Margin"8,8,8,8" />
   </StackPanel>
 
 </Window>
