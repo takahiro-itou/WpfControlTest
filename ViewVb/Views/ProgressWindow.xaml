@@ -10,12 +10,24 @@
     Title="ProgresseWindow"
     Height="448" Width="384"
 >
-  <StackPanel Orientation="Vertical">
-    <WpfControl.Utils:ProgressControl
-        x:Name="Progress1"
+  <DockPanel>
+
+    <Menu DockPanel.Dock="Top">
+      <MenuItem Header="Options">
+         <MenuItem Header="Cancelable" />
+         <MenuItem Header="Pausable" />
+      </MenuItem>
+      <MenuItem Header="Run" />
+    </Menu>
+
+    <StackPanel Orientation="Vertical">
+      <WpfControl.Utils:ProgressControl
+          x:Name="Progress1"
         Margin="16,8,16,8"
-    />
-    <Button Content="Run" Width="64" Margin="8,8,8,8" />
-  </StackPanel>
+      />
+      <Button Content="Run" Width="64" Margin="8,8,8,8" />
+    </StackPanel>
+
+  </DockPanel>
 
 </Window>
