@@ -4,11 +4,11 @@ Imports WpfControl.Utils
 Public Class TimeConsumingModel
         Inherits WpfControl.Utils.AbstractProgressModel
 
-Public Sub New(ByVal progress As IProgress(Of Integer))
+Public Sub New()
 ''--------------------------------------------------------------------
 ''    コンストラクタ
 ''--------------------------------------------------------------------
-    MyBase.New(progress)
+    MyBase.New()
 End Sub
 
 End Class
