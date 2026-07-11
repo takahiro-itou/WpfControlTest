@@ -11,7 +11,8 @@ Public Sub New()
     MyBase.New()
 End Sub
 
-Public Function runTask(ByVal progress As IProgress(Of Integer)) As Integer
+Public Overrides Function runTask(
+        ByVal progress As IProgress(Of Integer)) As Integer
 Dim i As Integer
 Dim total As Integer
 
