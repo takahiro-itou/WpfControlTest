@@ -2,7 +2,7 @@
 Imports WpfControl.Utils
 
 Public Class TimeConsumingModel
-        Inherits WpfControl.Utils.AbstractProgressModel
+        Inherits WpfControl.Utils.AbstractProgressModel(Of Integer, Of Integer)
 
 Public Sub New()
 ''--------------------------------------------------------------------
@@ -10,5 +10,20 @@ Public Sub New()
 ''--------------------------------------------------------------------
     MyBase.New()
 End Sub
+
+Public Function runTask(ByVal progress As IProgress(Of Integer)) As Integer
+Dim i As Integer
+Dim total As Integer
+
+    total = 0
+    For i = 1 To 20
+        total = total + i
+        Thread.Sleep(100)
+        progress.Report(i * 5)
+    Next i
+
+    runTask = total
+End Function
+
 
 End Class
