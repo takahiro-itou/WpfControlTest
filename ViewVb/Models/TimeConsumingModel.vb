@@ -2,7 +2,7 @@
 Imports WpfControl.Utils
 
 Public Class TimeConsumingModel
-        Inherits WpfControl.Utils.AbstractProgressModel(Of Integer, Of Integer)
+        Inherits WpfControl.Utils.AbstractProgressModel(Of Integer, Integer)
 
 Public Sub New()
 ''--------------------------------------------------------------------
