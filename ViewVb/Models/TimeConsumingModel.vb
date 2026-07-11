@@ -19,7 +19,7 @@ Dim total As Integer
     total = 0
     For i = 1 To 20
         total = total + i
-        Thread.Sleep(100)
+        System.Threading.Thread.Sleep(100)
         progress.Report(i * 5)
     Next i
 
