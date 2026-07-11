@@ -18,8 +18,13 @@ Dim total As Integer
 
     total = 0
     For i = 1 To 20
+        While ( Me.IsPaused)
+            System.Threading.Thread.Sleep(500)
+        End While
+
         total = total + i
-        System.Threading.Thread.Sleep(100)
+        System.Threading.Thread.Sleep(1000)
+        Me.CurrentValue = total
         progress.Report(i * 5)
     Next i
 

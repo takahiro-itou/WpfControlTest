@@ -28,6 +28,20 @@
       <Button Content="Run" Width="64" Margin="8,8,8,8"
         Command="{Binding ModelTaskCommand}"
       />
+
+      <TextBlock
+          Text="{Binding ResultValue, StringFormat='Current Value : {0}'}"
+          Margin="8,8,8,8"
+          HorizontalAlignment="Center"
+          VerticalAlignment="Center"
+      </TextBlock>
+      <TextBlock
+          Text="{Binding IsPaused, StringFormat='IsPaused : {0}'}"
+          Margin="8,8,8,8"
+          HorizontalAlignment="Center"
+          VerticalAlignment="Center"
+      </TextBlock>
+
     </StackPanel>
 
   </DockPanel>
