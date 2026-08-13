@@ -1,4 +1,13 @@
 
-msbuild -restore -t:Rebuild ^
-    -p:Configuration="Release"  -p:Platform=x64     ^
-    WpfControlTest.NetOld.sln
+set  solution=WpfControlTest
+set  target=Rebuild
+set  config="Debug"
+
+
+msbuild  -restore  -t:Clean     ^
+    -p:Configuration=%config%   -p:Platform=x64     ^
+    "%solution%.NetOld.sln"
+
+msbuild  -restore  -t:%target%  ^
+    -p:Configuration=%config%   -p:Platform=x64     ^
+    "%solution%.NetOld.sln"
