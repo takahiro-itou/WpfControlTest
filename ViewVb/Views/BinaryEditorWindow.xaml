@@ -7,7 +7,7 @@
     xmlns:local="clr-namespace:ViewVb"
     xmlns:WpfControl="clr-namespace:WpfControl.Editor;assembly=WpfControl"
     Title="ProgresseWindow"
-    Height="448" Width="384"
+    Height="450" Width="600"
 >
   <DockPanel>
 
@@ -19,9 +19,15 @@
       <MenuItem Header="Run" />
     </Menu>
 
-    <StackPanel Orientation="Vertical">
-      <WpfControl:BinaryEditor />
-    </StackPanel>
+    <Grid>
+      <Grid.ColumnDefinitions>
+        <RowDefinition Definition="*" />
+      </Grid.ColumnDefinitions>
+
+      <WpfControl:BinaryEditor
+          Grid.Column="0"  Grid.Row="0"
+      />
+    </Grid>
 
   </DockPanel>
 
