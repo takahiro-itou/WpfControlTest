@@ -20,9 +20,9 @@
     </Menu>
 
     <Grid>
-      <Grid.ColumnDefinitions>
-        <RowDefinition Definition="*" />
-      </Grid.ColumnDefinitions>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="*" />
+      </Grid.RowDefinitions>
 
       <WpfControl:BinaryEditor
           Grid.Column="0"  Grid.Row="0"
