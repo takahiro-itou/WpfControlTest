@@ -18,6 +18,16 @@ Private Sub mnuFileExit_Click(ByVal sender As Object, ByVal e As EventArgs)
     System.Windows.Application.Current.Shutdown()
 End Sub
 
+
+Private Sub mnuLaunchEditorBinaryEditor_Click(
+        ByVal sender As Object, ByVal e As EventArgs)
+''--------------------------------------------------------------------
+''    メニュー「起動」－「Editor」－「BinaryEditor」
+''--------------------------------------------------------------------
+    Dim frmBinEdit As New BinaryEditorWindow()
+    frmBinEdit.Show()
+End Sub
+
 Private Sub mnuLaunchSample_Click(ByVal sender As Object, ByVal e As EventArgs)
 ''--------------------------------------------------------------------
 ''    メニュー「起動」－「Sample」

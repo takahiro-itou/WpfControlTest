@@ -14,6 +14,11 @@
         <MenuItem Header="E_xit" Click="mnuFileExit_Click" />
       </MenuItem>
       <MenuItem Header="_Launch">
+        <MenuItem Header="Editor">
+          <MenuItem Header="BinaryEditor"
+              Click="mnuLaunchEditorBinaryEditor_Click"
+          />
+        </MenuItem>
         <MenuItem Header="Sample" Click="mnuLaunchSample_Click" />
         <MenuItem Header="_Utils">
           <MenuItem Header="ProgressBar" Click="mnuLaunchUtilsProgress_Click" />
