@@ -28,6 +28,27 @@ Private Sub mnuLaunchEditorBinaryEditor_Click(
     frmBinEdit.Show()
 End Sub
 
+
+Private Sub mnuLaunchEditorMatrixEditor_Click(
+        ByVal sender As Object, ByVal e As EventArgs)
+''--------------------------------------------------------------------
+''    メニュー「起動」－「Editor」－「MatrixEditor」
+''--------------------------------------------------------------------
+    Dim frmMatEdit As New MatrixEditorWindow()
+    frmMatEdit.Show()
+End Sub
+
+
+Private Sub mnuLaunchEditorMatrixViewer_Click(
+        ByVal sender As Object, ByVal e As EventArgs)
+''--------------------------------------------------------------------
+''    メニュー「起動」－「Editor」－「MatrixViewer」
+''--------------------------------------------------------------------
+    Dim frmMatView As New MatrixViewerWindow()
+    frmMatView.Show()
+End Sub
+
+
 Private Sub mnuLaunchSample_Click(ByVal sender As Object, ByVal e As EventArgs)
 ''--------------------------------------------------------------------
 ''    メニュー「起動」－「Sample」
@@ -35,6 +56,7 @@ Private Sub mnuLaunchSample_Click(ByVal sender As Object, ByVal e As EventArgs)
     Dim frmSample As New SampleWindow()
     frmSample.Show()
 End Sub
+
 
 Private Sub mnuLaunchUtilsProgress_Click(
         ByVal sender As Object, ByVal e As EventArgs)

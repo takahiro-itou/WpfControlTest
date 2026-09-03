@@ -6,7 +6,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:local="clr-namespace:ViewVb"
     xmlns:WpfControl="clr-namespace:WpfControl.Editor;assembly=WpfControl"
-    Title="ProgresseWindow"
+    Title="Binary Editor Test Window"
     Height="450" Width="600"
 >
   <DockPanel>

@@ -18,10 +18,19 @@
           <MenuItem Header="BinaryEditor"
               Click="mnuLaunchEditorBinaryEditor_Click"
           />
+          <Separator />
+          <MenuItem Header="MatrixEditor"
+              Click="mnuLaunchEditorMatrixEditor_Click"
+          />
+          <MenuItem Header="MatrixViewer"
+              Click="mnuLaunchEditorMatrixViewer_Click"
+          />
         </MenuItem>
         <MenuItem Header="Sample" Click="mnuLaunchSample_Click" />
         <MenuItem Header="_Utils">
-          <MenuItem Header="ProgressBar" Click="mnuLaunchUtilsProgress_Click" />
+          <MenuItem Header="ProgressBar"
+              Click="mnuLaunchUtilsProgress_Click"
+          />
         </MenuItem>
       </MenuItem>
     </Menu>
