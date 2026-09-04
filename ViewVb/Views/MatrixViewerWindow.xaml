@@ -23,7 +23,7 @@
         Grid.Column="0"  Grid.Row="0"
         MatrixData="{Binding MatrixData}"
         Rows="{Binding TotalRows}"
-        Columns="${Binding TotalColumns}"
+        Columns="{Binding TotalColumns}"
     />
     <StackPanel
         Grid.Column="0"  Grid.Row="1"
