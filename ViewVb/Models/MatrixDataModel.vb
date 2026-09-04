@@ -24,7 +24,7 @@ Public ReadOnly Property MatrixData As Integer()
     End Get
 End Property
 
-Public ReadOnly Property TotolColumns As Integer
+Public ReadOnly Property TotalColumns As Integer
     Get
         Return  4
     End Get
