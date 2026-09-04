@@ -3,7 +3,7 @@ Namespace Global.ViewVb
 
 Public Class MatrixDataModel
 
-Private m_data(12) As Integer
+Private m_data(120000) As Integer
 
 
 Public Sub New()
@@ -12,6 +12,9 @@ Public Sub New()
 ''--------------------------------------------------------------------
 Dim i As Integer
 
+    For i = 0 To 120000
+        m_data(i) = i * 2
+    Next i
     For i = 0 To 12 - 1
         m_data(i) = i * i
     Next i
