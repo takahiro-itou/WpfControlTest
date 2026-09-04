@@ -26,13 +26,13 @@ End Property
 
 Public ReadOnly Property TotalColumns As Integer
     Get
-        Return  4
+        Return  400
     End Get
 End Property
 
 Public ReadOnly Property TotalRows As Integer
     Get
-        Return  3
+        Return  10
     End Get
 End Property
 
