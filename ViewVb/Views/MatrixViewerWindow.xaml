@@ -24,6 +24,8 @@
         MatrixData="{Binding MatrixData}"
         Rows="{Binding TotalRows}"
         Columns="{Binding TotalColumns}"
+        HorizontalScrollBarVisibility="Auto"
+        VerticalScrollBarVisibility="Auto"
     />
     <StackPanel
         Grid.Column="0"  Grid.Row="1"
