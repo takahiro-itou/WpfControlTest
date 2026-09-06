@@ -9,6 +9,8 @@ Namespace Global.ViewVb
 Public Class MatrixDataModel
 
 Private m_data(120000) As MatrixCellData
+Private m_colWidths  As New List(Of Double) From { 70, 120, 80, 200 }
+Private m_rowHeights As New List(Of Double) From { 30, 50, 40, 60 }
 
 Public Sub New()
 ''--------------------------------------------------------------------
@@ -41,6 +43,18 @@ Dim brushBg2 As Brush
 
 End Sub
 
+
+Public ReadOnly Property CustomHeights As List(Of Double)
+    Get
+        Return  Me.m_rowHeights
+    End Get
+End Property
+
+Public ReadOnly Property CustomWidths As List(Of Double)
+    Get
+        Return  Me.m_colWidths
+    End Get
+End Property
 
 Public ReadOnly Property MatrixData As MatrixCellData()
     Get

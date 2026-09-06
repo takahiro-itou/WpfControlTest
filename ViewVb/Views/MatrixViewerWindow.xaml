@@ -24,6 +24,8 @@
         MatrixData="{Binding MatrixData}"
         Rows="{Binding TotalRows}"
         Columns="{Binding TotalColumns}"
+        ColumnWidths="{Binding CustomWidths}"
+        RowHeights="{Binding CustomHeights}"
         HorizontalScrollBarVisibility="Auto"
         VerticalScrollBarVisibility="Auto"
     />
