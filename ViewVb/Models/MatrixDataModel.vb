@@ -1,27 +1,48 @@
 ﻿
+Imports WpfControl.Editor
+
+Imports System.Windows.Media
+
+
 Namespace Global.ViewVb
 
 Public Class MatrixDataModel
 
-Private m_data(120000) As Integer
-
+Private m_data(120000) As MatrixCellData
 
 Public Sub New()
 ''--------------------------------------------------------------------
 ''    コンストラクタ
 ''--------------------------------------------------------------------
 Dim i As Integer
+Dim brushBg1 As Brush
+Dim brushBg2 As Brush
+
+    brushBg1 = Brushes.Red
+    brushBg2 = Brushes.LightGreen
 
     For i = 0 To 120000
-        m_data(i) = i * 2
+        With m_data(i)
+            If (i Mod 5) = 0 Then
+                .Background = brushBg1
+            End If
+            .Value = $"{i}, {i * 2}"
+        End With
     Next i
+
     For i = 0 To 12 - 1
-        m_data(i) = i * i
+        With m_data(i)
+            If (i Mod 2) = 0 Then
+                .Background = brushBg2
+            End If
+            .Value = $"{i}, {i * i}"
+        End With
     Next i
+
 End Sub
 
 
-Public ReadOnly Property MatrixData As Integer()
+Public ReadOnly Property MatrixData As MatrixCellData()
     Get
         Return  Me.m_data
     End Get
