@@ -33,8 +33,9 @@
           DefaultCellWidth="{Binding DefaultCellWidth}"
           DefaultCellHeight="32.0"
           RowHeights="{Binding CustomHeights}"
+        >
         </WpfControl:MatrixLayout>
-      </WpfControl:MatrixViewer.Laouts>
+      </WpfControl:MatrixViewer.Layouts>
     </WpfControl:MatrixViewer>
     <StackPanel
         Grid.Column="0"  Grid.Row="1"
