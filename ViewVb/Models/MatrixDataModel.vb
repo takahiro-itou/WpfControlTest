@@ -56,6 +56,12 @@ Public ReadOnly Property CustomWidths As List(Of Double)
     End Get
 End Property
 
+Public ReadOnly Property DefaultCellWidth As Double
+    Get
+        Return  72.0
+    End Get
+End Property
+
 Public ReadOnly Property MatrixData As MatrixCellData()
     Get
         Return  Me.m_data

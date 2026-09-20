@@ -28,11 +28,13 @@
         VerticalScrollBarVisibility="Auto"
     >
       <WpfControl:MatrixViewer.Layouts>
-        <WpfControl:MatrixOptions
+        <WpfControl:MatrixLayout
           ColumnWidths="{Binding CustomWidths}"
+          DefaultCellWidth="{Binding DefaultCellWidth}"
+          DefaultCellHeight="32.0"
           RowHeights="{Binding CustomHeights}"
-        </WpfControl:MatrixOptions>
-      </WpfControl:MatrixViewer.Layouts>
+        </WpfControl:MatrixLayout>
+      </WpfControl:MatrixViewer.Laouts>
     </WpfControl:MatrixViewer>
     <StackPanel
         Grid.Column="0"  Grid.Row="1"
