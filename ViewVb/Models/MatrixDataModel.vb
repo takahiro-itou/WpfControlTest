@@ -56,7 +56,7 @@ Public ReadOnly Property CustomWidths As List(Of Double)
     End Get
 End Property
 
-Public ReadOnly Property DefaultCellWidth As Double
+Public ReadOnly Property DefaultCellHeight As Double
     Get
         Return  32.0
     End Get

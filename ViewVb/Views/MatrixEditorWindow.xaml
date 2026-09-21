@@ -16,12 +16,12 @@
   <DockPanel>
     <Menu DockPanel.Dock="Top">
       <MenuItem Header="_Columns">
-        <MenuItem Header="Expand" Click="mnuColExpand_Click" />
-        <MenuItem Header="Shrink" Click="mnuColShrink_Click" />
+        <MenuItem Header="Expand" x:Name="mnuColExpand" />
+        <MenuItem Header="Shrink" x:Name="mnuColShrink" />
       </MenuItem>
       <MenuItem Header="_Rows">
-        <MenuItem Header="Expand" Click="mnuRowExpand_Click" />
-        <MenuItem Header="Shrink" Click="mnuRowShrink_Click" />
+        <MenuItem Header="Expand" x:Name="mnuRowExpand" />
+        <MenuItem Header="Shrink" x:Name="mnuRowShrink" />
       </MenuItem>
     </Menu>
 
