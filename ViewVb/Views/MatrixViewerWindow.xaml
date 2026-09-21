@@ -24,8 +24,6 @@
         MatrixData="{Binding MatrixData}"
         Rows="{Binding TotalRows}"
         Columns="{Binding TotalColumns}"
-        HorizontalScrollBarVisibility="Auto"
-        VerticalScrollBarVisibility="Auto"
     >
       <WpfControl:MatrixViewer.Layouts>
         <WpfControl:MatrixLayout

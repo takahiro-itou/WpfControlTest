@@ -30,8 +30,8 @@
       <WpfControl:MatrixViewer.Layouts>
         <WpfControl:MatrixLayout
           ColumnWidths="{Binding CustomWidths}"
-          DefaultCellWidth="{Binding DefaultCellWidth}"
-          DefaultCellHeight="32.0"
+          DefaultCellWidth="64.0"
+          DefaultCellHeight="64.0"
           RowHeights="{Binding CustomHeights}"
         >
         </WpfControl:MatrixLayout>
