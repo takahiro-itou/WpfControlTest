@@ -24,11 +24,17 @@
         MatrixData="{Binding MatrixData}"
         Rows="{Binding TotalRows}"
         Columns="{Binding TotalColumns}"
-        ColumnWidths="{Binding CustomWidths}"
-        RowHeights="{Binding CustomHeights}"
-        HorizontalScrollBarVisibility="Auto"
-        VerticalScrollBarVisibility="Auto"
-    />
+    >
+      <WpfControl:MatrixViewer.Layouts>
+        <WpfControl:MatrixLayout
+          ColumnWidths="{Binding CustomWidths}"
+          DefaultCellWidth="{Binding DefaultCellWidth}"
+          DefaultCellHeight="32.0"
+          RowHeights="{Binding CustomHeights}"
+        >
+        </WpfControl:MatrixLayout>
+      </WpfControl:MatrixViewer.Layouts>
+    </WpfControl:MatrixViewer>
     <StackPanel
         Grid.Column="0"  Grid.Row="1"
         Orientation="Horizontal"
