@@ -58,6 +58,12 @@ End Property
 
 Public ReadOnly Property DefaultCellWidth As Double
     Get
+        Return  32.0
+    End Get
+End Property
+
+Public ReadOnly Property DefaultCellWidth As Double
+    Get
         Return  72.0
     End Get
 End Property
