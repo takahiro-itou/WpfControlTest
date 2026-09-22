@@ -7,10 +7,17 @@ Imports System.Windows.Media
 Namespace Global.ViewVb
 
 Public Class MatrixDataModel
+        Inherits WpfHelper.Data.BindableBase
 
 Private m_data(120000) As MatrixCellData
+Private m_numCols As Integer = 400
+Private m_numRows As Integer = 10
+
 Private m_colWidths  As New List(Of Double) From { 70, 120, 80, 200 }
 Private m_rowHeights As New List(Of Double) From { 30, 50, 40, 60 }
+Private m_defaultCellHeight As Double = 32.0
+Private m_defaultCellWidth  As Double = 72.0
+
 
 Public Sub New()
 ''--------------------------------------------------------------------
@@ -44,21 +51,43 @@ Dim brushBg2 As Brush
 End Sub
 
 
-Public ReadOnly Property CustomHeights As List(Of Double)
+Public Property CustomHeights As List(Of Double)
     Get
         Return  Me.m_rowHeights
     End Get
+    Set(ByVal value As List(Of Double) )
+        SetValue(Me.m_rowHeights, value)
+    End Set
 End Property
 
-Public ReadOnly Property CustomWidths As List(Of Double)
+Public Property CustomWidths As List(Of Double)
     Get
         Return  Me.m_colWidths
     End Get
+    Set(ByVal value As List(Of Double) )
+        SetValue(Me.m_colWidths, value)
+    End Set
 End Property
 
 
-Public Property DefaultCellHeight As Double = 32.0
-Public Property DefaultCellWidth  As Double = 72.0
+Public Property DefaultCellHeight As Double
+    Get
+        Return  Me.m_defaultCellHeight
+    End Get
+    Set(ByVal value As Double)
+        SetValue(Me.m_defaultCellHeight, value)
+    End Set
+End Property
+
+
+Public Property DefaultCellWidth  As Double
+    Get
+        Return  Me.m_defaultCellWidth
+    End Get
+    Set(ByVal value As Double)
+        SetValue(Me.m_defaultCellWidth, value)
+    End Set
+End Property
 
 
 Public ReadOnly Property MatrixData As MatrixCellData()
@@ -67,16 +96,23 @@ Public ReadOnly Property MatrixData As MatrixCellData()
     End Get
 End Property
 
-Public ReadOnly Property TotalColumns As Integer
+
+Public Property TotalColumns As Integer
     Get
-        Return  400
+        Return  Me.m_numCols
     End Get
+    Set(ByVal value As Integer)
+        SetValue(Me.m_numCols, value)
+    End Set
 End Property
 
-Public ReadOnly Property TotalRows As Integer
+Public Property TotalRows As Integer
     Get
-        Return  10
+        Return  Me.m_numRows
     End Get
+    Set(ByVal value As Integer)
+        SetValue(Me.m_numRows, value)
+    End Set
 End Property
 
 
