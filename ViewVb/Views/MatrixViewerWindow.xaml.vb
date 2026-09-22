@@ -16,7 +16,7 @@ Private Sub mnuColExpand_Click(ByVal sender As Object, ByVal e As EventArgs) _
 ''--------------------------------------------------------------------
 ''    メニュー「列」－「拡大」
 ''--------------------------------------------------------------------
-    Me.DataContext.DecaultCellWidth += 4.0
+    Me.DataContext.DefaultCellWidth += 8.0
 End Sub
 
 
@@ -26,9 +26,9 @@ Private Sub mnuColShrink_Click(ByVal sender As Object, ByVal e As EventArgs) _
 ''    メニュー「列」－「縮小」
 ''--------------------------------------------------------------------
     With Me.DataContext
-        .DefaultCellWidth -= 4.0
-        If ( .DefaultCellWidth <= 4.0 )  Then
-            .DefaultCellWidth = 4.0
+        .DefaultCellWidth -= 8.0
+        If ( .DefaultCellWidth <= 8.0 )  Then
+            .DefaultCellWidth = 8.0
         End If
     End With
 End Sub
