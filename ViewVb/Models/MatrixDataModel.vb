@@ -24,16 +24,11 @@ Public Sub New()
 ''    コンストラクタ
 ''--------------------------------------------------------------------
 Dim i As Integer
-Dim brushBg1 As Brush
-Dim brushBg2 As Brush
-
-    brushBg1 = Brushes.Red
-    brushBg2 = Brushes.LightGreen
 
     For i = 0 To 120000
         With m_data(i)
             If (i Mod 5) = 0 Then
-                .Background = brushBg1
+                .Background = Colors.Red
             End If
             .Value = $"{i}, {i * 2}"
         End With
@@ -42,7 +37,7 @@ Dim brushBg2 As Brush
     For i = 0 To 12 - 1
         With m_data(i)
             If (i Mod 2) = 0 Then
-                .Background = brushBg2
+                .Background = Colors.LightGreen
             End If
             .Value = $"{i}, {i * i}"
         End With
