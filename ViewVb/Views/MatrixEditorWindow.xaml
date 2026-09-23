@@ -48,6 +48,12 @@
           >
           </WpfControl:MatrixLayout>
         </WpfControl:MatrixViewer.Layouts>
+        <WpfControl:MatrixViewer.Options>
+          <WpfControl:MatrixOption
+              HorizontalTextAlign="{Binding DefaultHorizontalTextAlign}"
+          >
+          </WpfControl:MatrixOption>
+        </WpfControl:MatrixViewer.Options>
       </WpfControl:MatrixViewer>
       <StackPanel
           Grid.Column="0"  Grid.Row="1"
