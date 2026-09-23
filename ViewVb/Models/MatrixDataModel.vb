@@ -1,7 +1,8 @@
 ﻿
-Imports WpfControl.Editor
-
+Imports System.Windows
 Imports System.Windows.Media
+
+Imports WpfControl.Editor
 
 
 Namespace Global.ViewVb
