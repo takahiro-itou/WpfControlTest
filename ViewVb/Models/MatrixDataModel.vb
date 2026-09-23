@@ -18,6 +18,8 @@ Private m_rowHeights As New List(Of Double) From { 30, 50, 40, 60 }
 Private m_defaultCellHeight As Double = 32.0
 Private m_defaultCellWidth  As Double = 72.0
 
+Private m_textHAlign As HorizontalAlignment = HorizontalAlignment.Center
+
 
 Public Sub New()
 ''--------------------------------------------------------------------
@@ -28,8 +30,9 @@ Dim i As Integer
     For i = 0 To 120000
         With m_data(i)
             If (i Mod 5) = 0 Then
-                .BgColor = Colors.Black
+                .BgColor = Colors.LightGreen
                 .FgColor = Colors.Red
+                .HorizontalTextAlign = HorizontalAlignment.Right
             End If
             .Value = $"{i}, {i * 2}"
         End With
@@ -40,6 +43,7 @@ Dim i As Integer
             If (i Mod 2) = 0 Then
                 .BgColor = Colors.Red
                 .FgColor = Colors.White
+                .HorizontalTextAlign = HorizontalAlignment.Left
             End If
             .Value = $"{i}, {i * i}"
         End With
@@ -83,6 +87,16 @@ Public Property DefaultCellWidth  As Double
     End Get
     Set(ByVal value As Double)
         SetValue(Me.m_defaultCellWidth, value)
+    End Set
+End Property
+
+
+Public Property DefaultHorizontalTextAlign As HorizontalAlignment
+    Get
+        Return  Me.m_textHAlign
+    End Get
+    Set(ByVal value As HorizontalAlignment)
+        SetValue(Me.m_textHAlign, value)
     End Set
 End Property
 
